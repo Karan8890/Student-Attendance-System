@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     
+    <title>Biometric Attendance</title>
+     
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='7_att.css') }}"
+    />
+  </head>
+  <body>
+     
+    <h1>Biometric Attendance System</h1>
+     
+    <div class="container">
+          <video id="video" autoplay></video>     <br />
+          <button onclick="capture()">Capture</button>    
+      <canvas id="canvas" style="display: none"></canvas>    
+      <p id="result-message"></p>
+         
+      <h3>Recent Attendance</h3>
+         
+      <ul id="attendance-list"></ul>
+       
+    </div>
+     
+    <script src="{{ url_for('static', filename='7_attdscript.js') }}"></script>
+  </body>
+</html>
